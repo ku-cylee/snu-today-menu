@@ -1,4 +1,5 @@
 import './env';
+import { scheduleJob } from 'node-schedule';
 import getMenu from './menu-parser';
 import sendEmail from './email';
 
@@ -8,4 +9,4 @@ const main = async (): Promise<void> => {
     await sendEmail(today, menu);
 };
 
-main();
+scheduleJob('0 0 10 * * 1-5', main);
