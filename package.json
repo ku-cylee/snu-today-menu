@@ -1,0 +1,40 @@
+{
+  "name": "snu-today-menu",
+  "version": "0.0.0",
+  "main": "src/app.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node dist/app.js",
+    "prod": "cross-env NODE_ENV=prod yarn start",
+    "dev": "cross-env NODE_ENV=dev ts-node-dev --rs --watch src --notify --respawn src/app.ts",
+    "eslint": "eslint src/**/*.ts",
+    "pretest": "yarn eslint",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --exit -r ts-node/register test/**/*.spec.ts --timeout 100000",
+    "precoverage": "yarn eslint",
+    "coverage": "cross-env NODE_ENV=test nyc mocha --exit -r ts-node/register test/**/*.spec.ts --timeout 100000"
+  },
+  "repository": "git@github.com:ku-cylee/snu-today-menu.git",
+  "author": "Chanyoung Lee <btstar1998@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "node-schedule": "^2.1.1",
+    "reflect-metadata": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/node-schedule": "^2.1.5",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.2",
+    "prettier": "^3.1.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
