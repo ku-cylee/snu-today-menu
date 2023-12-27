@@ -17,12 +17,15 @@
   "author": "Chanyoung Lee <btstar1998@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^1.6.3",
     "chai": "^4.3.10",
     "dotenv": "^16.3.1",
+    "node-html-parser": "^6.1.12",
     "node-schedule": "^2.1.1",
     "reflect-metadata": "^0.2.1"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^20.10.5",
     "@types/node-schedule": "^2.1.5",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
